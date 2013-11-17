@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+
+    <name>mod_popup</name>
+
+    <author>Alyona Gavrylei</author>
+
+    <creationDate>November 2013</creationDate>
+
+    <authorEmail>G_M_Alena@ukr.net</authorEmail>
+
+    <version>1.0</version>
+
+    <description>MOD_POPUP_XML_DESCRIPTION</description>
+
+    <files>
+
+        <filename module="mod_popup">mod_popup.php</filename>
+        <filename>menu.css</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+
+
+</extension>
