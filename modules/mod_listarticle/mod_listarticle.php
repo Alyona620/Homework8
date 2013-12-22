@@ -7,6 +7,7 @@ $list = modlistarticleHelper::getList($params);
 
 require JModuleHelper::getLayoutPath('mod_listarticle', $params->get('layout', 'default'));
 
+
 ?>
 
 

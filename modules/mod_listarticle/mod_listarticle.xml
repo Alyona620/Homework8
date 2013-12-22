@@ -15,12 +15,31 @@
 
 
     <files>
-        <filename module="mod_LISTARTICLE">mod_listarticle.php</filename>
+        <filename module="mod_listarticle">mod_listarticle.php</filename>
+        <folder>tmpl</folder>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
         <filename>mod_listarticle.xml</filename>
         <filename>index.html</filename>
         <filename>helper.php</filename>
-        <folder>tmpl</folder>
     </files>
+      <config>
+       <fields name="params">
+         <fieldset name="basic">
+
+           <field name="mycategory" type="category" extension="com_content" label="Select a category" description="" />
+
+           <field name="count" type="text" default="4" label="Quantity of articles" description="Quantity of articles to watch" />
+
+           <field name="mytimezone" type="timezone" default="" label="Select a timezone" description="" />
+
+           <field name="mycalendar" type="calendar" default="17-11-2013" label="Select a date" description="" format="%d-%m-%Y" />
+
+
+
+    </fieldset>
+   </fields>
+  </config>
 
 
 </extension>

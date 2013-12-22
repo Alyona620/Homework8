@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_ADD_STUDENT_FORM_LBL_STUDENTFORM_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_ADD_STUDENT_FORM_LBL_STUDENTFORM_CREATED_BY"
+            description="COM_ADD_STUDENT_FORM_DESC_STUDENTFORM_CREATED_BY"  /> 
+
+       <field name="pib" type="text"
+                
+            label="COM_ADD_STUDENT_FORM_LBL_STUDENTFORM_PIB"
+            description="COM_ADD_STUDENT_FORM_DESC_STUDENTFORM_PIB" 
+                
+                
+                 required="true" 
+            filter="raw" /> 
+
+       <field name="general" type="text"
+                
+            label="COM_ADD_STUDENT_FORM_LBL_STUDENTFORM_GENERAL"
+            description="COM_ADD_STUDENT_FORM_DESC_STUDENTFORM_GENERAL" 
+                
+                
+                
+            filter="raw"
+            size="50"
+            maxlength="255" /> 
+
+       <field name="birthday" type="calendar"
+                
+            label="COM_ADD_STUDENT_FORM_LBL_STUDENTFORM_BIRTHDAY"
+            description="COM_ADD_STUDENT_FORM_DESC_STUDENTFORM_BIRTHDAY" 
+                
+                
+                 required="true" 
+            filter="raw" /> 
+
+       <field name="gender" type="radio"
+                
+            label="COM_ADD_STUDENT_FORM_LBL_STUDENTFORM_GENDER"
+            description="COM_ADD_STUDENT_FORM_DESC_STUDENTFORM_GENDER" 
+                
+                
+                 required="true" 
+            filter="raw">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+        </field> 
+
+       <field name="group" type="text"
+                
+            label="COM_ADD_STUDENT_FORM_LBL_STUDENTFORM_GROUP"
+            description="COM_ADD_STUDENT_FORM_DESC_STUDENTFORM_GROUP" 
+                
+                
+                 required="true" 
+            filter="raw" /> 
+
+       <field name="average" type="text"
+                
+            label="COM_ADD_STUDENT_FORM_LBL_STUDENTFORM_AVERAGE"
+            description="COM_ADD_STUDENT_FORM_DESC_STUDENTFORM_AVERAGE" 
+                
+                
+                
+            filter="raw" /> 
+
+       <field name="book" type="text"
+                
+            label="COM_ADD_STUDENT_FORM_LBL_STUDENTFORM_BOOK"
+            description="COM_ADD_STUDENT_FORM_DESC_STUDENTFORM_BOOK" 
+                
+                
+                
+            maxlength="50" /> 
+
+       <field name="photo" type="media"
+                
+            label="COM_ADD_STUDENT_FORM_LBL_STUDENTFORM_PHOTO"
+            description="COM_ADD_STUDENT_FORM_DESC_STUDENTFORM_PHOTO" 
+                
+                
+                
+            directory="/images/folder" /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" /> 
+
+ </fieldset> 
+
+ <fieldset 
+                        name="accesscontrol">
+                       <field name="asset_id" type="hidden" filter="unset" />
+                       <field name="rules"
+                            type="rules"
+                            label="JFIELD_RULES_LABEL"
+                            translate_label="false"
+                            filter="rules"
+                            validate="rules"
+                            class="inputbox"
+                            component="com_add_student"
+                            section="studentform"
+                        />
+
+	</fieldset>
+
+</form>

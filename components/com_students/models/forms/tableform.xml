@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_STUDENTS_FORM_LBL_TABLE_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_STUDENTS_FORM_LBL_TABLE_CREATED_BY"
+            description="COM_STUDENTS_FORM_DESC_TABLE_CREATED_BY"  /> 
+
+       <field name="pib" type="text"
+                
+            label="COM_STUDENTS_FORM_LBL_TABLE_PIB"
+            description="COM_STUDENTS_FORM_DESC_TABLE_PIB" 
+                
+                
+                 required="true" 
+            class="PIB"
+            filter="safehtml"
+            size="100"
+            maxlength="100" /> 
+
+       <field name="general_info" type="editor"
+                
+            label="COM_STUDENTS_FORM_LBL_TABLE_GENERAL_INFO"
+            description="COM_STUDENTS_FORM_DESC_TABLE_GENERAL_INFO" 
+                
+                
+                
+            cols="100"
+            rows="8"
+            editor="desired"
+            filter="safehtml" /> 
+
+       <field name="birth_date" type="calendar"
+                
+            label="COM_STUDENTS_FORM_LBL_TABLE_BIRTH_DATE"
+            description="COM_STUDENTS_FORM_DESC_TABLE_BIRTH_DATE" 
+                
+                
+                
+            class="birth_date"
+            filter="safehtml" /> 
+
+       <field name="gender" type="list"
+                
+            label="COM_STUDENTS_FORM_LBL_TABLE_GENDER"
+            description="COM_STUDENTS_FORM_DESC_TABLE_GENDER" 
+                
+                
+                
+            filter="raw">
+                <option value="male">male</option>
+                <option value="female">female</option>
+        </field> 
+
+ 
+		<field name="filter_gender" type="list" onchange="this.form.submit();">
+			<option value="">COM_STUDENTS_TABLES_GENDER_FILTER</option>
+			<option value="male">male</option>
+			<option value="female">female</option>
+		</field> 
+
+       <field name="group" type="list"
+                
+            label="COM_STUDENTS_FORM_LBL_TABLE_GROUP"
+            description="COM_STUDENTS_FORM_DESC_TABLE_GROUP" 
+                
+                
+                 required="true" 
+            class="Group"
+            filter="raw"
+            multiple="false">
+                <option value="DS-334">DS-334</option>
+                <option value="CV-4512">CV-4512</option>
+                <option value="RT-987">RT-987</option>
+                <option value="ITP-113">ITP-113</option>
+                <option value="KT-112">KT-112</option>
+                <option value="DE-124">DE-124</option>
+                <option value="KJ-321">KJ-321</option>
+        </field> 
+
+ 
+		<field name="filter_group" type="list" onchange="this.form.submit();">
+			<option value="">COM_STUDENTS_TABLES_GROUP_FILTER</option>
+			<option value="DS-334">DS-334</option>
+			<option value="CV-4512">CV-4512</option>
+			<option value="RT-987">RT-987</option>
+			<option value="ITP-113">ITP-113</option>
+			<option value="KT-112">KT-112</option>
+			<option value="DE-124">DE-124</option>
+			<option value="KJ-321">KJ-321</option>
+		</field> 
+
+       <field name="average_score" type="text"
+                
+            label="COM_STUDENTS_FORM_LBL_TABLE_AVERAGE_SCORE"
+            description="COM_STUDENTS_FORM_DESC_TABLE_AVERAGE_SCORE" 
+                
+                
+                
+            class="score"
+            filter="safehtml"
+            size="100"
+            maxlength="100" /> 
+
+       <field name="number_student_book" type="text"
+                
+            label="COM_STUDENTS_FORM_LBL_TABLE_NUMBER_STUDENT_BOOK"
+            description="COM_STUDENTS_FORM_DESC_TABLE_NUMBER_STUDENT_BOOK" 
+                
+                
+                
+            class="number_book"
+            filter="safehtml"
+            size="100"
+            maxlength="100" /> 
+
+       <field name="image" type="media"
+                
+            label="COM_STUDENTS_FORM_LBL_TABLE_IMAGE"
+            description="COM_STUDENTS_FORM_DESC_TABLE_IMAGE" 
+                
+                
+                
+            filter="raw"
+            directory="/images/folder" /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" /> 
+
+ </fieldset> 
+
+ <fieldset 
+                        name="accesscontrol">
+                       <field name="asset_id" type="hidden" filter="unset" />
+                       <field name="rules"
+                            type="rules"
+                            label="JFIELD_RULES_LABEL"
+                            translate_label="false"
+                            filter="rules"
+                            validate="rules"
+                            class="inputbox"
+                            component="com_students"
+                            section="table"
+                        />
+
+	</fieldset>
+
+</form>
